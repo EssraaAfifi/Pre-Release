@@ -1,6 +1,6 @@
 #TASK 1
 """
-This code allows a class to pick their class president. It helps store the tutors name, candidate names, number of students per class and the number of votes. It will finally ouptut the name of the tutor, the votes of each candidate and the name of the candidate hat has won. In case of a tie in first place, then the program shall display who are the candidates that tied in first place.
+This code allows a class to pick their class president. It helps store the tutors name, candidate names, number of students per class and the number of votes. It will finally ouptut the name of the tutor, the votes of each candidate and the name of the candidate that won. In case of a tie in first place, then the program shall display who are the candidates that tied in first place.
 """
 
 #Variables Used to store Data
@@ -40,12 +40,22 @@ if Number_Candidates < 5: #Start of and if statement
       Candidate3 = Candidate3 + 1
     elif Vote == 4:
       Candidate4 = Candidate4 + 1 #End of the second for loop
-    
-  """
-  I'm now havnig trouble printing cause it will be variable depending on the number of candidates
-  """
+
+  #Calculating the winner
+  '''lorem'''
   #End of the if Statement
 
 #In case the tutor has entered more than 4 candidates
 else:
   print ("You have chosen more than 4 candidates.")
+
+#Ouputting
+if Number_Candidates < 5: #Start of for if statement
+  """
+  I'm now havnig trouble printing cause it will be variable depending on the number of candidates
+  """
+  print ("\n..........\n\nTutor's name:", Tutor_Name)
+  print ("Abstained:", Abstain)
+  for Outputting in range (Number_Candidates):
+    print("Candidate", Candidate_Names[Outputting] + ":")
+  print ("The winner is ... Drum Roll Please ... Winner")
