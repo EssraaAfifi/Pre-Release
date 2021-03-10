@@ -10,6 +10,7 @@ of a tie in first place, then the program shall display who are the candidates t
 Candidate_Names = []
 Class_Votes = [0,0,0,0]
 Abstain = 0
+Winner = ""
 
 #Beginning of the code, preparing
 Tutor_Name = input("Please enter the tutor's name: ")
