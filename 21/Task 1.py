@@ -8,11 +8,8 @@ of a tie in first place, then the program shall display who are the candidates t
 
 #Variables Used to store Data
 Candidate_Names = []
+Class_Votes = [0,0,0,0]
 Abstain = 0
-Candidate1 = 0
-Candidate2 = 0
-Candidate3 = 0
-Candidate4 = 0
 
 #Beginning of the code, preparing
 Tutor_Name = input("Please enter the tutor's name: ")
@@ -36,13 +33,13 @@ if Number_Candidates < 5: #Start of and if statement
     if Vote == 0:
       Abstain = Abstain + 1
     elif Vote == 1:
-      Candidate1 = Candidate1 + 1
+      Class_Votes[0] = Class_Votes[0] + 1
     elif Vote == 2:
-      Candidate2 = Candidate2 + 1
+      Class_Votes[1] = Class_Votes[1] + 1
     elif Vote == 3:
-      Candidate3 = Candidate3 + 1
+      Class_Votes[2] = Class_Votes[2] + 1
     elif Vote == 4:
-      Candidate4 = Candidate4 + 1 #End of the second for loop
+      Class_Votes[3] = Class_Votes[3] + 1 #End of the second for loop
 
   #Calculating the winner
   '''lorem'''
@@ -54,11 +51,8 @@ else:
 
 #Ouputting
 if Number_Candidates < 5: #Start of for if statement
-  """
-  I'm now havnig trouble printing cause it will be variable depending on the number of candidates
-  """
   print ("\n..........\n\nTutor's name:", Tutor_Name)
   print ("Abstained:", Abstain)
   for Outputting in range (Number_Candidates):
-    print("Candidate", Candidate_Names[Outputting] + ":")
+    print("Candidate", Candidate_Names[Outputting] + ":", Class_Votes[Outputting]) #Outputs names and votes
   print ("The winner is ... Drum Roll Please ... Winner")
