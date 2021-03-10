@@ -1,6 +1,9 @@
 #TASK 1
 """
-This code allows a class to pick their class president. It helps store the tutors name, candidate names, number of students per class and the number of votes. It will finally ouptut the name of the tutor, the votes of each candidate and the name of the candidate that won. In case of a tie in first place, then the program shall display who are the candidates that tied in first place.
+This code allows a class to pick their class president. It helps store the tutors name, 
+candidate names, number of students per class and the number of votes. It will finally ouptut the 
+name of the tutor, the votes of each candidate and the name of the candidate that won. In case 
+of a tie in first place, then the program shall display who are the candidates that tied in first place.
 """
 
 #Variables Used to store Data
