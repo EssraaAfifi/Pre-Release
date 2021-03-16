@@ -10,7 +10,10 @@ of a tie in first place, then the program shall display who are the candidates t
 Candidate_Names = []
 Class_Votes = [0,0,0,0]
 Abstain = 0
-Winner = ""
+Winner_Names = []
+Winner_Votes = []
+Winner_Name = ""
+Max_Votes = 0
 
 #Beginning of the code, preparing
 Tutor_Name = input("Please enter the tutor's name: ")
@@ -43,17 +46,25 @@ if Number_Candidates < 5: #Start of and if statement
       Class_Votes[3] = Class_Votes[3] + 1 #End of the second for loop
 
   #Calculating the winner
-  '''lorem'''
-  #End of the if Statement
+  for Finding in Class_Votes:
+    if Finding > Max_Votes:
+      Max_Votes = Finding
+      #Winner_Name = Candidate_Names[Finding]# Out of range
+    
+  Winner_Names.append(Winner_Name)
+  Winner_Votes.append(Max_Votes)
+  #Finished Calculating
 
-#In case the tutor has entered more than 4 candidates
-else:
-  print ("You have chosen more than 4 candidates.")
-
-#Ouputting
-if Number_Candidates < 5: #Start of for if statement
+  #Ouputting
   print ("\n..........\n\nTutor's name:", Tutor_Name)
   print ("Abstained:", Abstain)
   for Outputting in range (Number_Candidates):
     print("Candidate", Candidate_Names[Outputting] + ":", Class_Votes[Outputting]) #Outputs names and votes
-  print ("The winner is ... Drum Roll Please ... Winner")
+  for Outputting2 in (int(Winner_Names)): #List needs working
+    print ("The winner is ... Drum Roll Please ...", Winner_Names[Outputting2], Winner_Votes[Outputting2])
+
+  #End of second for loop
+
+#In case the tutor has entered more than 4 candidates
+else:
+  print ("You have chosen more than 4 candidates.")
