@@ -11,9 +11,7 @@ Candidate_Names = []
 Class_Votes = [0,0,0,0]
 Abstain = 0
 Winner_Names = []
-Winner_Votes = []
-Winner_Name = ""
-Max_Votes = 0
+Max_Vote = 0
 
 #Beginning of the code, preparing
 Tutor_Name = input("Please enter the tutor's name: ")
@@ -47,15 +45,12 @@ if Number_Candidates < 5: #Start of and if statement
 
   #Calculating the winner
   for Finding in range(Number_Candidates):
-    if Class_Votes[Finding] > Max_Votes:
-      Max_Votes = Class_Votes[Finding]
-      Winner_Name = Candidate_Names[Finding]
-      
-      Winner_Names.append(Winner_Name)
-      Winner_Votes.append(Max_Votes)
+    if Class_Votes[Finding] > Max_Vote:
+      Max_Vote = Class_Votes[Finding]
     
-  Winner_Names.append(Winner_Name)
-  Winner_Votes.append(Max_Votes)
+  for Finding2 in range(Number_Candidates):
+    if Class_Votes[Finding2] == Max_Vote:
+      Winner_Names.append(Candidate_Names[Finding2])
   #Finished Calculating
 
   #Ouputting
@@ -63,9 +58,9 @@ if Number_Candidates < 5: #Start of and if statement
   print ("Abstained:", Abstain)
   for Outputting in range (Number_Candidates):
     print("Candidate", Candidate_Names[Outputting] + ":", Class_Votes[Outputting]) #Outputs names and votes
-  
-  for Outputting2 in range(len(Winner_Names)-1): #List needs working
-    print ("The winner is ... Drum Roll Please ...", Winner_Names[Outputting2], Winner_Votes[Outputting2])
+ 
+  for Outputting2 in range(len(Winner_Names)):
+    print ("The winner is ... Drum Roll Please ...", Winner_Names[Outputting2] + ":", Max_Vote)
 
   #End of second for loop
 
