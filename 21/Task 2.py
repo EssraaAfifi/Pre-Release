@@ -7,6 +7,7 @@ Task 2: Will prevent any students from voting twice by allowing them to entet th
 #Variables Used to store Data
 Candidate_Names = []
 Class_Votes = [0,0,0,0]
+Voting = 0
 Abstain = 0
 Winner_Names = []
 Max_Vote = 0
