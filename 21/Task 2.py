@@ -29,12 +29,13 @@ if Number_Candidates < 5: #Start of and if statement
   *** It counts the turn of the person re-doing ***
   Progress: Trying to find a way to subtract one turn whenever someone re-votes
   """
-  for Voting in range(Number_Students): #Starts of the second for loop and preveting looping
+  while Voting < Number_Students: #Starts of the second for loop and preveting looping
     Student_Code = str(input("\nPlease enter your student code: "))
     if Student_Code in Student_Codes:
       print ("You are not allowed to vote again")
     else:
       Student_Codes.append(Student_Code)
+      Voting = Voting + 1
       print ("Enter 0 to Abstain")
       for Instructions in range(Number_Candidates): #Allows to output voting procedures which changes based on the number of candidates
         print ("Enter", Instructions+1, "to vote for", Candidate_Names[Instructions])
